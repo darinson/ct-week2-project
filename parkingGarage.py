@@ -5,12 +5,19 @@ class parkingGarage():
         self.currentTickets = {}
 
     def takeTicket(self):
+        
+        if self.tickets == []:
+            print("Garage is full")
+            return parkingGarage
+
         ticketnum = int(input('choose a ticket number: '))
         if ticketnum not in self.tickets:
             print("Ticket not available")
             print("Here the available tickets: ", self.tickets)
             ticketnum = int(input('Please enter valid ticket number: '))
             
+
+
         self.tickets.remove(ticketnum)
         self.parkingSpaces.remove(ticketnum)
         self.currentTickets[ticketnum] = ""
@@ -64,9 +71,9 @@ def runGarage():
             myGarage.payForParking()
         elif response.lower() == 'leave':
             myGarage.leaveGarage()
-            if myGarage.currentTickets == {}:
-                print("All tickets paid, good bye!")
-                break
+           # if myGarage.currentTickets == {}:
+               # print("All tickets paid, good bye!")
+               # break
         
             
 runGarage()
