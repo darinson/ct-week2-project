@@ -27,7 +27,7 @@ class parkingGarage():
         ticketnum = int(input('Please choose your ticket: '))
         if ticketnum not in self.currentTickets.keys():
             print("Ticket not found, here are the available tickets: [{}]".format(
-                  ','.join([str(key) for key in sorted(self.currentTickets.keys()]))))
+                  ','.join([str(key) for key in sorted(self.currentTickets.keys())])))
             ticketnum = int(input('Please enter valid ticket: '))
 
         amount = (input('Please enter payment amount of $20: '))

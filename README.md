@@ -41,4 +41,10 @@ When the project is completed, commit the final changes, sync all pull requests,
 
 
 ###### List group responsiblities below:
+jonathan - parkingGarage class, takeTickets method, run function, leaveGarage method
+darin - payForParking method, run function, formatting of print statements
+
+both worked on testing and refining the code!
+
 ###### Provide name and approxamite line numbers where each person wrote their code
+
