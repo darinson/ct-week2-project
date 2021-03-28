@@ -33,8 +33,11 @@ class parkingGarage():
         amount = (input('Please enter payment amount of $20: '))
         # if isinstance(self.amount, str):
         # amount = input('Please enter a number: ')
-        if float(amount) == 0 or float(amount) < 20:
+        if float(amount) < 20:
             amount = float(input('Please enter a valid amount: '))
+
+        if float(amount) > 20:
+            print("Thank you for your donation.")
 
         if ticketnum in self.currentTickets.keys():
             self.currentTickets[ticketnum] = "Paid"
@@ -51,8 +54,11 @@ class parkingGarage():
                 input('Ticket has not been paid, please enter a payment of $20:'))
            # if isinstance(self.amount, str):
             #    amount = input('Please enter a number: ')
-            if float(amount) == 0 or float(amount) < 20:
+            if float(amount) < 20:
                 amount = float(input('Please enter the valid amount: '))
+
+            if float(amount) > 20:
+                print("Thank you for your donation.")
         del self.currentTickets[ticketnum]
 
         print("Your ticket has been paid.\nThank you, have a nice day")
