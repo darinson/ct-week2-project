@@ -21,13 +21,13 @@ class parkingGarage():
         self.parkingSpaces.remove(ticketnum)
         self.currentTickets[ticketnum] = ""
         print("Current tickets pulled: [{}]".format(
-            ','.join([str(key) for key in self.currentTickets.keys()])))
+            ','.join([str(key) for key in sorted(self.currentTickets.keys())])))
 
     def payForParking(self):
         ticketnum = int(input('Please choose your ticket: '))
         if ticketnum not in self.currentTickets.keys():
             print("Ticket not found, here are the available tickets: [{}]".format(
-                  ','.join([str(key) for key in self.currentTickets.keys()])))
+                  ','.join([str(key) for key in sorted(self.currentTickets.keys()]))))
             ticketnum = int(input('Please enter valid ticket: '))
 
         amount = (input('Please enter payment amount of $20: '))
@@ -47,7 +47,7 @@ class parkingGarage():
         ticketnum = int(input('Please enter your ticket number: '))
         if ticketnum not in self.currentTickets.keys():
             print("Ticket not found, here are the available tickets: [{}]".format(
-                  ','.join([str(key) for key in self.currentTickets.keys()])))
+                  ','.join([str(key) for key in sorted(self.currentTickets.keys()]))))
             ticketnum = int(input('Please enter a valid ticket: '))
         if self.currentTickets[ticketnum] != "Paid":
             amount = float(
