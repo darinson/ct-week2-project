@@ -47,4 +47,3 @@ darin - payForParking method, run function, formatting of print statements
 both worked on testing and refining the code!
 
 ###### Provide name and approxamite line numbers where each person wrote their code
-
